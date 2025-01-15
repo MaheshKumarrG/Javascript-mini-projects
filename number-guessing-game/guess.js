@@ -1,10 +1,14 @@
 let computerChoice=0;
 let userChoice=0;
+let tryCount = 1;
+
+let displayELem = document.querySelector('.js-display-result');
+let tryElem = document.querySelector('.js-display-tries');
 
 document.querySelector('.js-start-game')
     .addEventListener('click',()=>{
         computerChoice = Math.round(Math.random() * 10);
-        // console.log(computerChoice);        
+        console.log(computerChoice);        
     });
 
 
@@ -16,9 +20,11 @@ document.querySelector('.js-submit')
 });
 
 function result(computerChoice,userChoice){
-    if(computerChoice == userChoice) console.log('You win');
-    else console.log("Try again");
-    console.log('Your Choice',userChoice);
-    console.log('Computer choice',computerChoice);
+    if(computerChoice == userChoice) {
+        displayELem.innerHTML = 'You win';
+        tryElem.innerHTML =  `Tries:${tryCount}`;
+    } else {
+        displayELem.innerHTML = "Try again";
+        tryCount++;
+    }
 }
-
