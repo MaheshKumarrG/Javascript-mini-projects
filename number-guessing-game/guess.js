@@ -11,7 +11,6 @@ document.querySelector('.js-start-game')
         console.log(computerChoice);        
     });
 
-
 document.querySelector('.js-submit')
     .addEventListener('click',()=>{
         let inputElem = document.querySelector('.js-input');
