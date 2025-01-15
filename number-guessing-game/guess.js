@@ -1,28 +1,24 @@
-// document.querySelector('.js-submit')
-// .addEventListener('click',()=>{
-//     let inputElem = document.querySelector('.js-input');
-//     let userChoice = inputElem.value;
-//     let computerChoice = Number(Math.random());
-//     finalCompChoice(computerChoice);
-//     result(computerChoice,userChoice);
-//     });
+let computerChoice=0;
+let userChoice=0;
 
-
-
-// let computerChoice;
 document.querySelector('.js-start-game')
     .addEventListener('click',()=>{
-        let computerChoice = Math.round(Math.random() * 10);
-        console.log(computerChoice);        
+        computerChoice = Math.round(Math.random() * 10);
+        // console.log(computerChoice);        
     });
 
+
+document.querySelector('.js-submit')
+    .addEventListener('click',()=>{
+        let inputElem = document.querySelector('.js-input');
+        userChoice = inputElem.value;
+        result(computerChoice,userChoice);
+});
+
 function result(computerChoice,userChoice){
-    if(userChoice > computerChoice){
-        console.log('Your choice is high');
-    }else if(userChoice < computerChoice){
-        console.log('Your choice is low');
-    }else{
-        console.log('You won');
-    }
+    if(computerChoice == userChoice) console.log('You win');
+    else console.log("Try again");
+    console.log('Your Choice',userChoice);
+    console.log('Computer choice',computerChoice);
 }
 
