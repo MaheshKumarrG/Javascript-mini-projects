@@ -7,13 +7,10 @@ let displayELem = document.querySelector('.js-display-result');
 let inputElem = document.querySelector('.js-input');
 let nameElem  = document.querySelector('.js-get-name');
 
-
-
 document.querySelector('.js-start-game')
     .addEventListener('click',()=>{
         userName = nameElem.value;
         computerChoice = Math.round(Math.random() * 10);
-        console.log(userName);        
     });
 
 document.querySelector('.js-submit')
@@ -23,8 +20,6 @@ document.querySelector('.js-submit')
     });
 
 inputElem.addEventListener('keydown', function(event) {
-    // let keyPressed = event.key;
-    // console.log(keyPressed);
     if (event.key === 'Enter') { 
         document.querySelector('.js-submit').click(); 
     }
