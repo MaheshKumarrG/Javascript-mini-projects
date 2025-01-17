@@ -21,7 +21,15 @@ document.querySelector('.js-submit')
     .addEventListener('click',()=>{
         userChoice = inputElem.value;
         result(computerChoice,userChoice);
-});
+    });
+
+inputElem.addEventListener('keydown', function(event) {
+    // let keyPressed = event.key;
+    // console.log(keyPressed);
+    if (event.key === 'Enter') { 
+        document.querySelector('.js-submit').click(); 
+    }
+});    
 
 function result(computerChoice,userChoice){
     if(computerChoice == userChoice) {
@@ -33,7 +41,6 @@ function result(computerChoice,userChoice){
     }
 }
 
-
 document.querySelector('.js-reset')
     .addEventListener('click',()=>{
         displayELem.innerHTML = '';
@@ -42,3 +49,6 @@ document.querySelector('.js-reset')
         computerChoice = Math.round(Math.random() * 10);
         console.log(computerChoice);
     });
+
+
+
