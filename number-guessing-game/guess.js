@@ -4,7 +4,6 @@ let tryCount = 1;
 let userName ='';
 
 let displayELem = document.querySelector('.js-display-result');
-let tryElem = document.querySelector('.js-display-tries');
 let inputElem = document.querySelector('.js-input');
 let nameElem  = document.querySelector('.js-get-name');
 
