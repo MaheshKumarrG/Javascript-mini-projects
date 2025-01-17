@@ -1,16 +1,20 @@
 let computerChoice=0;
 let userChoice=0;
 let tryCount = 1;
+let userName ='';
 
 let displayELem = document.querySelector('.js-display-result');
 let tryElem = document.querySelector('.js-display-tries');
 let inputElem = document.querySelector('.js-input');
+let nameElem  = document.querySelector('.js-get-name');
+
 
 
 document.querySelector('.js-start-game')
     .addEventListener('click',()=>{
+        userName = nameElem.value;
         computerChoice = Math.round(Math.random() * 10);
-        console.log(computerChoice);        
+        console.log(userName);        
     });
 
 document.querySelector('.js-submit')
@@ -21,8 +25,7 @@ document.querySelector('.js-submit')
 
 function result(computerChoice,userChoice){
     if(computerChoice == userChoice) {
-        displayELem.innerHTML = 'You win';
-        tryElem.innerHTML =  `Tries:${tryCount}`;
+        displayELem.innerHTML = `Congragulations ${userName}, You Win! By guessing the number in ${tryCount} tries`;
     } else {
         if(userChoice < computerChoice) displayELem.innerHTML = 'Too low';
         else  displayELem.innerHTML = 'Too high';
@@ -34,7 +37,6 @@ function result(computerChoice,userChoice){
 document.querySelector('.js-reset')
     .addEventListener('click',()=>{
         displayELem.innerHTML = '';
-        tryElem.innerHTML =  ``;
         inputElem.value = '';
         tryCount = 1;
         computerChoice = Math.round(Math.random() * 10);
