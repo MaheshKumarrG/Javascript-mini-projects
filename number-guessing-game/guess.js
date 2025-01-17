@@ -44,5 +44,4 @@ document.querySelector('.js-reset')
         console.log(computerChoice);
     });
 
-
-
+console.log('Thank You!')
