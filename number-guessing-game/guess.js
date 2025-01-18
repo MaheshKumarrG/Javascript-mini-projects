@@ -41,7 +41,6 @@ document.querySelector('.js-reset')
         inputElem.value = '';
         tryCount = 1;
         computerChoice = Math.round(Math.random() * 10);
-        console.log(computerChoice);
     });
 
 console.log('Thank You!')
