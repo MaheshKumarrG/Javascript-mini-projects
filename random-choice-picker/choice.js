@@ -10,8 +10,9 @@ document.querySelector('.js-next-btn')
     .addEventListener('click',()=>{
         choiceCount = inputCountElem.value;        
         for(let i=1; i<=choiceCount;i++){
-            htmlDisplayInput += `<p><input type="text"></p>`
+            htmlDisplayInput += `<p><input type="text" class=id-${i}></p>`
         }
+        console.log(htmlDisplayInput);
         displayInput.innerHTML = htmlDisplayInput;
     });
 
