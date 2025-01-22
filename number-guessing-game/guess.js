@@ -37,10 +37,11 @@ function result(computerChoice,userChoice){
 
 document.querySelector('.js-reset')
     .addEventListener('click',()=>{
+        nameElem.value = '';
         displayELem.innerHTML = '';
         inputElem.value = '';
         tryCount = 1;
-        computerChoice = Math.round(Math.random() * 10);
+        // computerChoice = Math.round(Math.random() * 10);
     });
 
 console.log('Thank You!')
