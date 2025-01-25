@@ -10,7 +10,7 @@ let imageArray = [
 
 let imageElem = '';
 for(let i = 0; i < imageArray.length;i++){
-    imageElem += `<img src="" class=id-${i}>`;   
+    imageElem += `<img src="" class="id-${i} css-image">`;   
 }
 document.querySelector('.js-image-holder')
     .innerHTML = imageElem;
