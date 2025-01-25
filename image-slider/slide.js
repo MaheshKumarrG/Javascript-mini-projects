@@ -5,15 +5,16 @@ let imageArray = [
     'images/luffy.webp',
     'images/girl2.webp',
     'images/girl.webp',
-    // 'images/aeroplane.webp',
+    'images/aeroplane.webp'
 ];
 
-// for(let i = 0; i < 7;i++){
-//     document.querySelector('.js-image-holder')
-//         .innerHTML = `<img src="${imageArray[i]}" alt="">`;    
-// }
-
-for(let i = 0; i < 7;i++){
-    document.querySelector('.js-image-holder')
-        .innerHTML = `<img src="${imageArray[i]}" alt="">`;    
+let imageElem = '';
+for(let i = 0; i < imageArray.length;i++){
+    imageElem += `<img src="" class=id-${i}>`;   
+}
+document.querySelector('.js-image-holder')
+    .innerHTML = imageElem;
+for(let i = 0; i < imageArray.length;i++){
+    document.querySelector(`.id-${i}`)
+        .src = `${imageArray[i]}`;
 }
