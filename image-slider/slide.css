@@ -3,3 +3,9 @@
     height: 400px;
     object-fit: contain;
 }
+
+.css-flex{
+    display: flex;
+}
+
+
