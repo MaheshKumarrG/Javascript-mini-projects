@@ -1,20 +1,23 @@
 let imageArray = [
     'images/sung.webp',
     'images/sasuke.webp',
-    'images/naruto.webp',
-    'images/luffy.webp',
-    'images/girl2.webp',
-    'images/girl.webp',
-    'images/aeroplane.webp'
+    // 'images/naruto.webp',
+    // 'images/luffy.webp',
+    // 'images/girl2.webp',
+    // 'images/girl.webp',
+    // 'images/aeroplane.webp'
 ];
 
-let imgHtml = '';
+let i = 0;
 
-let imageDiv = document.querySelector('.js-image-holder');
+let imageDisplay = document.querySelector('.js-image-holder');
 
-for(let i=0;i<imageArray.length;i++){
-    setInterval((i) => {
-        console.log(imageArray[i]);       
-    }, 3000);
-}
-console.log(imgHtml);
+setInterval(() => {
+    imageDisplay.innerHTML = `<img src="${imageArray[i]}" class="css-imgDisplay">`;
+    i++;
+
+    if (i >= imageArray.length) {
+        i=0;
+    }
+}, 3000);
+
