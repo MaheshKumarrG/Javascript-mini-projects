@@ -8,13 +8,13 @@ let imageArray = [
     'images/aeroplane.webp'
 ];
 
-let imageElem = '';
-for(let i = 0; i < imageArray.length;i++){
-    imageElem += `<img src="" class="id-${i} css-image">`;   
+let imgHtml = '';
+
+let imageDiv = document.querySelector('.js-image-holder');
+
+for(let i=0;i<imageArray.length;i++){
+    setInterval((i) => {
+        console.log(imageArray[i]);       
+    }, 3000);
 }
-document.querySelector('.js-image-holder')
-    .innerHTML = imageElem;
-for(let i = 0; i < imageArray.length;i++){
-    document.querySelector(`.id-${i}`)
-        .src = `${imageArray[i]}`;
-}
+console.log(imgHtml);
