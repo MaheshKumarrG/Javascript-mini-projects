@@ -33,14 +33,17 @@ setInterval(() => {
     i++;
 
     if (i >= imageArray.length) {
-        i=0;
+        i=0; 
     }
 }, 5000);
 
 
 document.querySelector('.js-pre').addEventListener('click',()=>{
     i--;
-    console.log(i);
+    setInterval(() => {
+        imageDisplay.innerHTML = `<img src="${imageArray[i]}" class="css-imgDisplay">`;
+        i++;
+    }, 5000);
 });
 
 document.querySelector('.js-nxt').addEventListener('click',()=>{
