@@ -11,10 +11,9 @@
     justify-content: center;
 }
 .hexaBtn{
-    height: rem;
-    width: 1rem;
+    height: 2rem;
+    width: 8rem;
 
-    /* position: fixed;
-    bottom: 5.5rem;
-    right: 20rem; */
+    margin-top: 8px;
+    margin-left: 8px;
 }

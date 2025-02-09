@@ -12,11 +12,29 @@ let displayColor = function() {
     colorDisplay.style.backgroundColor = color;
 }
 
-document.querySelector('.start').addEventListener('click',()=>{
-    intervalID = setInterval(displayColor, 1000);
+// document.querySelector('.start').addEventListener('click',()=>{
+//     intervalID = setInterval(displayColor, 1000);
+// });
+
+let btnElem = document.querySelector('.js-btn');
+
+btnElem.addEventListener('click',()=>{
+    if(btnElem.innerHTML === 'Start'){
+        btnElem.innerHTML = 'Stop';
+        btnElem.classList.remove('start');
+        btnElem.classList.add('stop');
+        intervalID = setInterval(displayColor, 1000);
+    }
+    else{
+        btnElem.innerHTML = 'Start';
+        btnElem.classList.remove('stop');
+        btnElem.classList.add('start');
+        clearInterval(intervalID);
+    }
 });
 
-document.querySelector('.stop').addEventListener('click',()=>{
-    clearInterval(intervalID);
-})
+
+// document.querySelector('.stop').addEventListener('click',()=>{
+//     clearInterval(intervalID);
+// })
 
