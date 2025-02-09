@@ -1,0 +1,20 @@
+.color-div{
+    background-color: aqua;
+    width: 19rem;
+    height: 40rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hexaBtn{
+    height: rem;
+    width: 1rem;
+
+    /* position: fixed;
+    bottom: 5.5rem;
+    right: 20rem; */
+}
