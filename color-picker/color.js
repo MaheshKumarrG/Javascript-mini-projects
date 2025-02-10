@@ -2,6 +2,8 @@ let intervalID = '';
 
 const colorDisplay = document.querySelector('.js-color-div');
 
+// displaying random colors using setInterval
+
 let displayColor = function() {
     let hexa = '0123456789ABCDEF';
     let color = '#';
@@ -12,8 +14,9 @@ let displayColor = function() {
     colorDisplay.style.backgroundColor = color;
 }
 
-let btnElem = document.querySelector('.js-btn');
+//start and stop buttons
 
+let btnElem = document.querySelector('.js-btn');
 btnElem.addEventListener('click',()=>{
     if(btnElem.innerHTML === 'Start'){
         btnElem.innerHTML = 'Stop';
@@ -29,4 +32,16 @@ btnElem.addEventListener('click',()=>{
     }
 });
 
+// copy functionality
+
+let hexaBtn = document.querySelector('.js-hexa-code');
+let copyBtn = document.querySelector('.js-copy');
+
+
+copyBtn.addEventListener('click',()=>{
+    copyText = hexaBtn.textContent;
+    navigator.clipboard.writeText(copyText).then(()=>{
+        alert('copied');
+    });
+});
 

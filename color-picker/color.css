@@ -32,21 +32,25 @@ body{
     font-size: 3rem;
     font-weight: bolder;
     color: #175230;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
 }
 
 .hexaBtn{
-    padding:1.1rem 3rem ;
+    padding:1.1rem 1.8rem ;
     font-size: 1.2rem;
+    margin-left: 10px;
 }
 .hexaBtn,
-.start-stop{
+.start-stop,
+.copy-icon{
     border-radius: 0.6rem;
     border: none;
     font-weight: bold;
     cursor:pointer;
     margin-top: 0.5rem;
     background-color: #76B38F;
-    color: rgb(33, 55, 55);
+    color: #213737;
 }
 .start-stop{
     padding:1rem 4rem;
@@ -54,10 +58,20 @@ body{
     font-size: 1.5rem;
 }
 .hexaBtn:hover,
-.start-stop:hover{
+.start-stop:hover,
+.copy-icon:hover{
     transform: scale(1.1);
 }
 .hexaBtn:active,
-.start-stop:active{
+.start-stop:active,
+.copy-icon:active{
     transform: scale(1);
 }
+.copy-div{
+    display: flex;
+    /* margin-right: 0.5rem; */
+}
+
+.copy-icon img{
+    height: 2rem;
+}       
