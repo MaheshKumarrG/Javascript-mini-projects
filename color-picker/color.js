@@ -12,10 +12,6 @@ let displayColor = function() {
     colorDisplay.style.backgroundColor = color;
 }
 
-// document.querySelector('.start').addEventListener('click',()=>{
-//     intervalID = setInterval(displayColor, 1000);
-// });
-
 let btnElem = document.querySelector('.js-btn');
 
 btnElem.addEventListener('click',()=>{
@@ -23,7 +19,7 @@ btnElem.addEventListener('click',()=>{
         btnElem.innerHTML = 'Stop';
         btnElem.classList.remove('start');
         btnElem.classList.add('stop');
-        intervalID = setInterval(displayColor, 1000);
+        intervalID = setInterval(displayColor, 2000);
     }
     else{
         btnElem.innerHTML = 'Start';
@@ -33,8 +29,4 @@ btnElem.addEventListener('click',()=>{
     }
 });
 
-
-// document.querySelector('.stop').addEventListener('click',()=>{
-//     clearInterval(intervalID);
-// })
 
