@@ -1,5 +1,7 @@
-let xhr = new XMLHttpRequest();
-
-xhr.open('GET','https://api.quotable.io/quotes/random');
-
-xhr.send();
+fetch('https://thequoteshub.com/api/random-quote').then((responseData)=>{
+    return responseData.json();
+}).then((data)=>{
+    console.log(data);    
+}).catch(()=>{
+        console.log('Error occured during fetch');
+});
